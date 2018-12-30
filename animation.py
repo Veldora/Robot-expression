@@ -3,12 +3,16 @@ import pygame
 
 class Animation:
 
+    # images: Loaded images list
+    # x, y: Position (to render)
+    # delay: Time between each scene in animation
+    # loop: True if the animation run forever
     def __init__(self, images, x, y, delay, loop=False):
         self.images = images
         self.x = x
         self.y = y
         self.image_index = 0
-        self.time = 0
+        self.time = 0   # counter
         self.delay = delay
         self.finished = False
         self.loop = loop
